@@ -94,8 +94,9 @@
   .rail-mark {
     display: inline-flex;
     flex-direction: column;
-    gap: 2px;
-    padding: 0.6rem 0.75rem;
+    align-items: center;
+    gap: 8px;
+    padding: 0.75rem 0.9rem;
     background: var(--navy-900);
     color: var(--white);
     margin-bottom: 2.5rem;
@@ -105,6 +106,7 @@
     font-weight: 600;
     font-size: 0.8rem;
     letter-spacing: 0.12em;
+    text-align: center;
   }
   .rail-mark .rule { width: 100%; height: 1px; background: var(--line-on-navy); }
 
@@ -148,13 +150,14 @@
   .cover-mark {
     display: inline-flex;
     flex-direction: column;
-    gap: 6px;
-    padding: 1rem 1.1rem;
+    align-items: center;
+    gap: 10px;
+    padding: 1.1rem 1.3rem;
     background: var(--navy-900);
     color: var(--white);
     width: fit-content;
   }
-  .cover-mark .word { font-size: 1rem; font-weight: 600; letter-spacing: 0.14em; }
+  .cover-mark .word { font-size: 1rem; font-weight: 600; letter-spacing: 0.14em; text-align: center; }
   .cover-mark .rule { width: 100%; height: 1px; background: var(--line-on-navy); }
   .cover h1 { font-size: 4.5rem; color: var(--navy-900); max-width: 20ch; }
   .cover .dek { font-size: 1.1875rem; color: var(--ink-600); max-width: 46ch; }
@@ -235,8 +238,8 @@
   .logo-cell.mono { background: var(--bone-500); }
   .logo-cell.on-brass { background: var(--brass-400); }
 
-  .mark { display: inline-flex; flex-direction: column; gap: 6px; padding: 0.85rem 1rem; }
-  .mark .word { font-size: 0.95rem; font-weight: 600; letter-spacing: 0.14em; }
+  .mark { display: inline-flex; flex-direction: column; align-items: center; gap: 10px; padding: 0.9rem 1.1rem; }
+  .mark .word { font-size: 0.95rem; font-weight: 600; letter-spacing: 0.14em; text-align: center; }
   .mark .rule { width: 100%; height: 1px; }
   .mark.navy-box { background: var(--navy-900); color: var(--white); }
   .mark.navy-box .rule { background: var(--line-on-navy); }
@@ -245,9 +248,21 @@
   .mark.mono { background: transparent; color: var(--ink-900); border: 1px solid var(--line); }
   .mark.mono .rule { background: var(--line); }
 
+  /* Square icon lockup — app icon, favicon, social avatar */
+  .icon-mark {
+    width: 220px;
+    height: 220px;
+    background: var(--navy-900);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon-mark .mark { padding: 0; gap: 16px; }
+  .icon-mark .mark .word { font-size: 1.3rem; }
+
   .clearspace-demo { border: 1px dashed var(--navy-300); display: inline-flex; padding: 1.6rem; margin: 0 auto; }
 
-  .misuse-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 2rem; }
+  .misuse-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.25rem; margin-top: 2rem; }
   .misuse-cell { border: 1px solid var(--line); background: var(--bone-50); height: 130px; display: flex; align-items: center; justify-content: center; position: relative; }
   .misuse-cell .x { position: absolute; top: 8px; right: 10px; color: var(--negative); font-size: 0.9rem; }
   .misuse-cell .cap { position: absolute; bottom: 8px; left: 10px; font-size: 0.6875rem; color: var(--ink-600); }
@@ -330,7 +345,7 @@
 
 <div class="shell">
   <nav class="rail" aria-label="Chapters">
-    <div class="rail-mark"><span class="word">LEVERAGED</span><span class="rule"></span></div>
+    <div class="rail-mark"><span class="rule"></span><span class="word">LEVERAGED</span><span class="rule"></span></div>
     <div class="rail-nav" id="railNav">
       <a href="#foundations"><span class="num">00</span> Foundations</a>
       <a href="#color"><span class="num">01</span> Color</a>
@@ -344,7 +359,7 @@
 
   <main>
     <div class="cover">
-      <div class="cover-mark"><span class="word">LEVERAGED</span><span class="rule"></span></div>
+      <div class="cover-mark"><span class="rule"></span><span class="word">LEVERAGED</span><span class="rule"></span></div>
       <span class="eyebrow">Brand Design System · Direction 1a — Deepened navy &amp; brass</span>
       <h1>Capital, considered.</h1>
       <p class="dek">Color, type, and component standards for every surface Leveraged ships — proposals, statements, the advisor portal, and the mandates page.</p>
@@ -508,44 +523,55 @@
     <section id="logo">
       <div class="chapter-head"><span class="chapter-num">03</span><h2>Logo &amp; Lockup</h2></div>
       <div class="col-wide">
+        <div style="display:flex; gap:2rem; align-items:flex-start; flex-wrap:wrap; margin-bottom:2.5rem;">
+          <div class="icon-mark">
+            <div class="mark"><span class="rule"></span><span class="word">LEVERAGED</span><span class="rule"></span></div>
+          </div>
+          <div class="col" style="max-width:28rem; padding-top:0.5rem;">
+            <p class="eyebrow" style="margin-bottom:0.75rem;">Primary lockup — square icon</p>
+            <p>The full-bleed navy square is the canonical asset: app icon, favicon, social avatar, and the cover of every printed piece. The wordmark sits centered between two equal hairline rules, never one.</p>
+          </div>
+        </div>
+
         <div class="logo-grid">
           <div class="logo-cell on-bone">
-            <div class="mark navy-box"><span class="word">LEVERAGED</span><span class="rule"></span></div>
+            <div class="mark navy-box"><span class="rule"></span><span class="word">LEVERAGED</span><span class="rule"></span></div>
           </div>
           <div class="logo-cell on-navy">
-            <div class="mark reversed"><span class="word">LEVERAGED</span><span class="rule"></span></div>
+            <div class="mark reversed"><span class="rule"></span><span class="word">LEVERAGED</span><span class="rule"></span></div>
           </div>
           <div class="logo-cell on-brass">
-            <div class="mark navy-box"><span class="word">LEVERAGED</span><span class="rule"></span></div>
+            <div class="mark navy-box"><span class="rule"></span><span class="word">LEVERAGED</span><span class="rule"></span></div>
           </div>
           <div class="logo-cell mono">
-            <div class="mark mono"><span class="word">LEVERAGED</span><span class="rule"></span></div>
+            <div class="mark mono"><span class="rule"></span><span class="word">LEVERAGED</span><span class="rule"></span></div>
           </div>
         </div>
 
         <div class="col" style="margin-bottom:2rem;">
-          <p>The mark is a set wordmark under a single hairline rule, held in a filled navy field. It never appears without that field on a light ground, and never in any color but navy, white, brass, or ink.</p>
+          <p>The mark is a set wordmark centered between two hairline rules, held in a filled navy field. It never appears without that field on a light ground, and never in any color but navy, white, brass, or ink.</p>
         </div>
 
         <div style="display:flex; gap:3rem; align-items:center; flex-wrap:wrap;">
           <div>
             <p class="eyebrow" style="margin-bottom:0.75rem;">Clearspace = the cap-height of the wordmark, all sides</p>
             <div class="clearspace-demo">
-              <div class="mark navy-box"><span class="word">LEVERAGED</span><span class="rule"></span></div>
+              <div class="mark navy-box"><span class="rule"></span><span class="word">LEVERAGED</span><span class="rule"></span></div>
             </div>
           </div>
           <div>
             <p class="eyebrow" style="margin-bottom:0.75rem;">Minimum size</p>
-            <div class="mark navy-box" style="transform:scale(0.72); transform-origin:left center;"><span class="word">LEVERAGED</span><span class="rule"></span></div>
+            <div class="mark navy-box" style="transform:scale(0.72); transform-origin:left center;"><span class="rule"></span><span class="word">LEVERAGED</span><span class="rule"></span></div>
             <p style="font-size:0.8125rem; color:var(--ink-600); margin-top:0.5rem;">96px wide on screen · 20mm in print</p>
           </div>
         </div>
 
         <div class="misuse-grid">
-          <div class="misuse-cell"><span class="x">✕</span><div class="mark navy-box" style="background:var(--brass-600); color:var(--navy-900);"><span class="word">LEVERAGED</span><span class="rule" style="background:rgba(30,46,79,0.3);"></span></div><span class="cap">Recolor the field</span></div>
-          <div class="misuse-cell"><span class="x">✕</span><div class="mark navy-box" style="transform:scaleX(0.7);"><span class="word">LEVERAGED</span><span class="rule"></span></div><span class="cap">Condense or stretch</span></div>
-          <div class="misuse-cell"><span class="x">✕</span><div class="mark navy-box" style="box-shadow:0 10px 20px rgba(0,0,0,0.35);"><span class="word">LEVERAGED</span><span class="rule"></span></div><span class="cap">Add drop shadow</span></div>
-          <div class="misuse-cell"><span class="x">✕</span><div class="mark navy-box" style="transform:rotate(-6deg);"><span class="word">LEVERAGED</span><span class="rule"></span></div><span class="cap">Rotate or angle</span></div>
+          <div class="misuse-cell"><span class="x">✕</span><div class="mark navy-box" style="background:var(--brass-600); color:var(--navy-900);"><span class="rule" style="background:rgba(30,46,79,0.3);"></span><span class="word">LEVERAGED</span><span class="rule" style="background:rgba(30,46,79,0.3);"></span></div><span class="cap">Recolor the field</span></div>
+          <div class="misuse-cell"><span class="x">✕</span><div class="mark navy-box" style="transform:scaleX(0.7);"><span class="rule"></span><span class="word">LEVERAGED</span><span class="rule"></span></div><span class="cap">Condense or stretch</span></div>
+          <div class="misuse-cell"><span class="x">✕</span><div class="mark navy-box" style="box-shadow:0 10px 20px rgba(0,0,0,0.35);"><span class="rule"></span><span class="word">LEVERAGED</span><span class="rule"></span></div><span class="cap">Add drop shadow</span></div>
+          <div class="misuse-cell"><span class="x">✕</span><div class="mark navy-box" style="transform:rotate(-6deg);"><span class="rule"></span><span class="word">LEVERAGED</span><span class="rule"></span></div><span class="cap">Rotate or angle</span></div>
+          <div class="misuse-cell"><span class="x">✕</span><div class="mark navy-box"><span class="word">LEVERAGED</span><span class="rule"></span></div><span class="cap">Drop the top rule</span></div>
         </div>
       </div>
     </section>
@@ -646,7 +672,7 @@
           <p class="applied-label">Marketing hero — leveraged.com</p>
           <div class="hero-demo">
             <div class="hero-nav">
-              <div class="mark reversed" style="padding:0.6rem 0.7rem;"><span class="word" style="font-size:0.75rem;">LEVERAGED</span><span class="rule"></span></div>
+              <div class="mark reversed" style="padding:0.6rem 0.7rem; gap:6px;"><span class="rule"></span><span class="word" style="font-size:0.75rem;">LEVERAGED</span><span class="rule"></span></div>
               <div class="links"><span>Practice</span><span>Insight</span><span>Contact</span></div>
             </div>
             <div class="hero-body">
@@ -683,7 +709,7 @@
 
             <div class="statement">
               <div class="statement-head">
-                <div class="mark navy-box"><span class="word">LEVERAGED</span><span class="rule"></span></div>
+                <div class="mark navy-box"><span class="rule"></span><span class="word">LEVERAGED</span><span class="rule"></span></div>
                 <div class="ref">Ref. LVG-04217<br />Q3 2026</div>
               </div>
               <div class="statement-body">

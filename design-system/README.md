@@ -29,6 +29,10 @@ navy & brass** (Source Serif 4 + Work Sans).
 4. **Tabular numerals everywhere money lines up.** Apply
    `font-variant-numeric: tabular-nums` (see `.ls-figure` in
    `components.css`) to any column of financial data.
+5. **The wordmark sits between two rules, not one.** `LEVERAGED` is
+   centered between an equal hairline rule above and below it, in a
+   filled navy field — see `.ls-mark` / `.ls-icon-mark` in
+   `components.css` and Chapter 03 of the style guide.
 
 ## Using the tokens
 

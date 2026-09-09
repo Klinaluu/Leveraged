@@ -7,6 +7,40 @@
   linking this file directly in a production app.
 */
 
+/* Logo lockup — wordmark centered between two hairline rules */
+.ls-mark {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  background: var(--color-navy-900);
+  color: var(--color-white);
+  width: fit-content;
+}
+.ls-mark .ls-mark-word {
+  font-family: var(--font-body);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.14em;
+  text-align: center;
+}
+.ls-mark .ls-mark-rule {
+  width: 100%;
+  height: 1px;
+  background: var(--color-line-hairline-on-navy);
+}
+
+/* Square icon lockup — app icon, favicon, social avatar */
+.ls-icon-mark {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  background: var(--color-navy-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ls-icon-mark .ls-mark { background: transparent; padding: 0; gap: var(--space-3); }
+
 /* Eyebrow / overline label */
 .ls-eyebrow {
   font-family: var(--font-body);
