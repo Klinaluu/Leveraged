@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500&family=Work+Sans:wght@400;500;600&display=swap">
+  <style>
+    :root{
+      --navy:#1E2E4F; --slate:#3E5480; --brass:#B38A53; --brass-600:#96733F; --bone:#EFEBE2; --ink:#171310;
+      --ink-600:#4A453E; --ink-300:#8B8579; --line:rgba(23,19,16,0.14); --line-on-navy:rgba(239,235,226,0.24);
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;background:var(--bone);font-family:'Work Sans',sans-serif;color:var(--ink);}
+    a{color:var(--brass);} a:hover{color:var(--brass-600);}
+    .eyebrow{font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--slate);}
+    .section-title{font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-300);}
+    .btn{font-family:'Work Sans',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;padding:14px 28px;border:1px solid transparent;cursor:default;}
+    .btn-primary{background:var(--brass);color:#171310;}
+    .btn-secondary{background:transparent;color:var(--navy);border-color:var(--navy);}
+    .btn-ghost{background:transparent;color:var(--navy);padding-left:4px;padding-right:4px;}
+    .label{font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-600);}
+    .input{border:1px solid var(--line);background:#F7F5EF;padding:13px 16px;font-family:'Work Sans',sans-serif;font-size:15px;color:var(--ink);}
+    .badge{font-size:11px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;padding:5px 10px;display:inline-flex;align-items:center;gap:6px;}
+    .badge-dot{width:6px;height:6px;}
+  </style>
+</helmet>
+<div style="width:1440px;background:var(--bone);padding:96px;display:flex;flex-direction:column;gap:72px;">
+
+  <div style="display:flex;flex-direction:column;gap:10px;">
+    <div class="eyebrow">Components</div>
+    <div style="font-family:'Source Serif 4',serif;font-weight:500;font-size:40px;color:var(--navy);">Building blocks</div>
+  </div>
+
+  <!-- Buttons -->
+  <div style="display:flex;flex-direction:column;gap:20px;">
+    <div class="section-title">Buttons</div>
+    <div style="display:flex;gap:16px;align-items:center;">
+      <button class="btn btn-primary">Request the brief</button>
+      <button class="btn btn-secondary">Mandates</button>
+      <button class="btn btn-ghost" style="text-decoration:underline;text-underline-offset:4px;">View disclosures</button>
+      <button class="btn btn-primary" style="opacity:0.4;">Disabled</button>
+    </div>
+  </div>
+
+  <!-- Form -->
+  <div style="display:flex;flex-direction:column;gap:20px;">
+    <div class="section-title">Form inputs</div>
+    <div style="display:flex;gap:24px;">
+      <div style="display:flex;flex-direction:column;gap:8px;width:280px;">
+        <div class="label">Institution name</div>
+        <div class="input">Meridian Pension Trust</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;width:280px;">
+        <div class="label">Mandate type</div>
+        <div class="input" style="display:flex;justify-content:space-between;align-items:center;">
+          <span>Private credit</span>
+          <span style="color:var(--ink-300);">⌄</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;width:280px;">
+        <div class="label">AUM (focused)</div>
+        <div class="input" style="border-color:#1E2E4F;border-width:2px;padding:12px 15px;">$1.42B</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Badges -->
+  <div style="display:flex;flex-direction:column;gap:20px;">
+    <div class="section-title">Badges &amp; tags</div>
+    <div style="display:flex;gap:12px;">
+      <span class="badge" style="background:#E6EBE2;color:#3E5340;"><span class="badge-dot" style="background:#5C7A5A;"></span>Within mandate</span>
+      <span class="badge" style="background:#F1E4CE;color:#5A3E17;"><span class="badge-dot" style="background:#9C6B2E;"></span>Nearing threshold</span>
+      <span class="badge" style="background:#F0E0DC;color:#5A2620;"><span class="badge-dot" style="background:#8C4A42;"></span>Off mandate</span>
+      <span class="badge" style="background:#DEE4EC;color:#1E2E4F;">Private credit</span>
+      <span class="badge" style="background:transparent;color:var(--ink-600);border:1px solid var(--line);">Draft</span>
+    </div>
+  </div>
+
+  <!-- Nav bar -->
+  <div style="display:flex;flex-direction:column;gap:20px;">
+    <div class="section-title">Navigation bar</div>
+    <div style="background:var(--navy);padding:24px 40px;display:flex;justify-content:space-between;align-items:center;">
+      <div style="display:flex;align-items:center;gap:8px;width:170px;flex-direction:column;">
+        <div style="width:100%;height:1px;background:#EFEBE2;"></div>
+        <div style="font-size:15px;font-weight:500;letter-spacing:0.14em;color:#EFEBE2;padding:6px 0;">LEVERAGED</div>
+        <div style="width:100%;height:1px;background:#EFEBE2;"></div>
+      </div>
+      <div style="display:flex;gap:40px;">
+        <span style="font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#DEE4EC;">Practice</span>
+        <span style="font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#DEE4EC;">Insight</span>
+        <span style="font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#DEE4EC;">Contact</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card + Table -->
+  <div style="display:flex;gap:32px;">
+    <div style="display:flex;flex-direction:column;gap:20px;flex:1;">
+      <div class="section-title">Card</div>
+      <div style="border:1px solid var(--line);background:#F7F5EF;padding:32px;display:flex;flex-direction:column;gap:14px;">
+        <div class="eyebrow">Portfolio</div>
+        <div style="font-family:'Source Serif 4',serif;font-weight:500;font-size:34px;color:var(--navy);">$1,420.7M</div>
+        <div style="font-size:13px;color:#5C7A5A;font-weight:600;">+2.14% QTD</div>
+        <div style="height:1px;background:var(--line);margin:8px 0;"></div>
+        <div style="font-size:14px;color:var(--ink-600);">Private credit — 38% of AUA, within target band.</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px;flex:1.4;">
+      <div class="section-title">Data table row</div>
+      <div style="border:1px solid var(--line);background:#F7F5EF;">
+        <div style="display:flex;padding:14px 20px;border-bottom:1px solid var(--line);">
+          <div class="label" style="flex:2;">Allocation</div>
+          <div class="label" style="flex:1;text-align:right;">Weight</div>
+          <div class="label" style="flex:1;text-align:right;">Target</div>
+        </div>
+        <div style="display:flex;padding:16px 20px;border-bottom:1px solid var(--line);font-size:15px;">
+          <div style="flex:2;">Private credit</div>
+          <div style="flex:1;text-align:right;font-variant-numeric:tabular-nums;">38%</div>
+          <div style="flex:1;text-align:right;font-variant-numeric:tabular-nums;color:var(--ink-300);">35–40%</div>
+        </div>
+        <div style="display:flex;padding:16px 20px;border-bottom:1px solid var(--line);font-size:15px;">
+          <div style="flex:2;">Public equity</div>
+          <div style="flex:1;text-align:right;font-variant-numeric:tabular-nums;">31%</div>
+          <div style="flex:1;text-align:right;font-variant-numeric:tabular-nums;color:var(--ink-300);">28–33%</div>
+        </div>
+        <div style="display:flex;padding:16px 20px;font-size:15px;">
+          <div style="flex:2;">Real assets</div>
+          <div style="flex:1;text-align:right;font-variant-numeric:tabular-nums;">21%</div>
+          <div style="flex:1;text-align:right;font-variant-numeric:tabular-nums;color:var(--ink-300);">18–24%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div style="display:flex;flex-direction:column;gap:20px;padding-bottom:96px;">
+    <div class="section-title">Tabs</div>
+    <div style="display:flex;gap:36px;border-bottom:1px solid var(--line);">
+      <div style="padding-bottom:14px;font-size:14px;font-weight:600;color:var(--navy);border-bottom:2px solid var(--brass);">Overview</div>
+      <div style="padding-bottom:14px;font-size:14px;font-weight:500;color:var(--ink-300);">Allocation</div>
+      <div style="padding-bottom:14px;font-size:14px;font-weight:500;color:var(--ink-300);">Statements</div>
+      <div style="padding-bottom:14px;font-size:14px;font-weight:500;color:var(--ink-300);">Disclosures</div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

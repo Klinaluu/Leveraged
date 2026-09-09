@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Work+Sans:wght@400;500;600&display=swap">
+  <style>
+    :root{
+      --navy:#1E2E4F; --navy-700:#152238; --slate:#3E5480; --slate-300:#7C90AC; --slate-100:#DEE4EC;
+      --brass:#B38A53; --brass-600:#96733F; --brass-100:#F0E4D2;
+      --bone:#EFEBE2; --bone-050:#F7F5EF;
+      --ink:#171310; --ink-600:#4A453E; --ink-300:#8B8579; --line:rgba(23,19,16,0.14);
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;background:var(--bone);font-family:'Work Sans',sans-serif;color:var(--ink);}
+    a{color:var(--brass-600);} a:hover{color:var(--brass);}
+    .eyebrow{font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--slate);}
+  </style>
+</helmet>
+<div style="width:1440px;height:900px;background:var(--bone);padding:96px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;">
+
+  <div style="display:flex;align-items:center;gap:20px;">
+    <img src="logo.png" alt="Leveraged" style="width:64px;height:64px;display:block;">
+    <div style="width:1px;height:40px;background:var(--line);"></div>
+    <div class="eyebrow">Design System &nbsp;·&nbsp; v1.0</div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:28px;max-width:920px;">
+    <div class="eyebrow" style="color:var(--brass-600);">Brand &amp; product foundations</div>
+    <div style="font-family:'Source Serif 4',serif;font-weight:500;font-size:96px;line-height:1.02;color:var(--navy);letter-spacing:-0.01em;">
+      Leveraged.
+    </div>
+    <div style="font-size:20px;line-height:1.5;color:var(--ink-600);max-width:640px;">
+      Independent counsel on allocation, structure and exposure — for pensions, endowments and insurers. Capital, considered.
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:24px;">
+    <div style="display:flex;gap:1px;background:var(--line);border:1px solid var(--line);width:fit-content;">
+      <div style="width:96px;height:64px;background:var(--navy);"></div>
+      <div style="width:96px;height:64px;background:var(--slate);"></div>
+      <div style="width:96px;height:64px;background:var(--brass);"></div>
+      <div style="width:96px;height:64px;background:var(--bone-050);"></div>
+      <div style="width:96px;height:64px;background:var(--ink);"></div>
+    </div>
+    <div style="display:flex;gap:56px;align-items:baseline;">
+      <div style="font-family:'Source Serif 4',serif;font-size:28px;color:var(--navy);">Source Serif 4</div>
+      <div style="font-size:15px;color:var(--ink-300);">/</div>
+      <div style="font-size:18px;color:var(--ink-600);">Work Sans</div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

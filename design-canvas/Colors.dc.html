@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Work+Sans:wght@400;500;600&display=swap">
+  <style>
+    :root{
+      --navy:#1E2E4F; --slate:#3E5480; --brass:#B38A53; --bone:#EFEBE2; --ink:#171310;
+      --ink-600:#4A453E; --ink-300:#8B8579; --line:rgba(23,19,16,0.14);
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;background:var(--bone);font-family:'Work Sans',sans-serif;color:var(--ink);}
+    a{color:var(--brass);} a:hover{color:#96733F;}
+    .eyebrow{font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--slate);}
+    .h2{font-family:'Source Serif 4',serif;font-weight:500;font-size:30px;color:var(--navy);}
+    .swatch-label{font-size:13px;font-weight:600;color:var(--ink);}
+    .swatch-hex{font-size:12px;color:var(--ink-300);font-variant-numeric:tabular-nums;}
+    .swatch-use{font-size:12px;color:var(--ink-600);line-height:1.4;}
+  </style>
+</helmet>
+<div style="width:1440px;background:var(--bone);padding:96px;display:flex;flex-direction:column;gap:72px;">
+
+  <div style="display:flex;flex-direction:column;gap:10px;">
+    <div class="eyebrow">Color System</div>
+    <div class="h2" style="font-size:40px;">Palette</div>
+    <div style="font-size:16px;color:var(--ink-600);max-width:620px;line-height:1.5;">
+      A deepened navy and brass, built for a house of record — not a pitch deck. No gradients; state and hierarchy carry the weight.
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:20px;">
+    <div class="eyebrow">Core</div>
+    <div style="display:flex;gap:1px;background:var(--line);border:1px solid var(--line);">
+      <div style="width:220px;">
+        <div style="height:140px;background:#1E2E4F;"></div>
+        <div style="padding:14px 16px;background:#F7F5EF;display:flex;flex-direction:column;gap:4px;">
+          <div class="swatch-label">Navy</div><div class="swatch-hex">#1E2E4F</div>
+          <div class="swatch-use">Primary. Text on light, surfaces on dark, nav.</div>
+        </div>
+      </div>
+      <div style="width:220px;">
+        <div style="height:140px;background:#3E5480;"></div>
+        <div style="padding:14px 16px;background:#F7F5EF;display:flex;flex-direction:column;gap:4px;">
+          <div class="swatch-label">Slate</div><div class="swatch-hex">#3E5480</div>
+          <div class="swatch-use">Secondary. Charts, links, supporting fills.</div>
+        </div>
+      </div>
+      <div style="width:220px;">
+        <div style="height:140px;background:#B38A53;"></div>
+        <div style="padding:14px 16px;background:#F7F5EF;display:flex;flex-direction:column;gap:4px;">
+          <div class="swatch-label">Brass</div><div class="swatch-hex">#B38A53</div>
+          <div class="swatch-use">Accent. Primary actions, emphasis, one per view.</div>
+        </div>
+      </div>
+      <div style="width:220px;">
+        <div style="height:140px;background:#EFEBE2;border-bottom:1px solid var(--line);"></div>
+        <div style="padding:14px 16px;background:#F7F5EF;display:flex;flex-direction:column;gap:4px;">
+          <div class="swatch-label">Bone</div><div class="swatch-hex">#EFEBE2</div>
+          <div class="swatch-use">Ground. Default page and app background.</div>
+        </div>
+      </div>
+      <div style="width:220px;">
+        <div style="height:140px;background:#171310;"></div>
+        <div style="padding:14px 16px;background:#F7F5EF;display:flex;flex-direction:column;gap:4px;">
+          <div class="swatch-label">Ink</div><div class="swatch-hex">#171310</div>
+          <div class="swatch-use">Text. Near-black, never pure #000.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:20px;">
+    <div class="eyebrow">Navy ramp</div>
+    <div style="display:flex;gap:1px;background:var(--line);border:1px solid var(--line);">
+      <div style="flex:1;height:88px;background:#DCE2EA;display:flex;align-items:flex-end;padding:10px;"><span class="swatch-hex" style="color:#4A453E;">100 · #DCE2EA</span></div>
+      <div style="flex:1;height:88px;background:#98A7BC;display:flex;align-items:flex-end;padding:10px;"><span class="swatch-hex" style="color:#171310;">300 · #98A7BC</span></div>
+      <div style="flex:1;height:88px;background:#3E5480;display:flex;align-items:flex-end;padding:10px;"><span class="swatch-hex" style="color:#EFEBE2;">500 · #3E5480</span></div>
+      <div style="flex:1;height:88px;background:#1E2E4F;display:flex;align-items:flex-end;padding:10px;"><span class="swatch-hex" style="color:#EFEBE2;">700 · #1E2E4F</span></div>
+      <div style="flex:1;height:88px;background:#121C30;display:flex;align-items:flex-end;padding:10px;"><span class="swatch-hex" style="color:#EFEBE2;">900 · #121C30</span></div>
+    </div>
+    <div class="eyebrow" style="margin-top:12px;">Brass ramp</div>
+    <div style="display:flex;gap:1px;background:var(--line);border:1px solid var(--line);">
+      <div style="flex:1;height:88px;background:#F0E4D2;display:flex;align-items:flex-end;padding:10px;"><span class="swatch-hex" style="color:#4A453E;">100 · #F0E4D2</span></div>
+      <div style="flex:1;height:88px;background:#D9B98A;display:flex;align-items:flex-end;padding:10px;"><span class="swatch-hex" style="color:#171310;">300 · #D9B98A</span></div>
+      <div style="flex:1;height:88px;background:#B38A53;display:flex;align-items:flex-end;padding:10px;"><span class="swatch-hex" style="color:#171310;">500 · #B38A53</span></div>
+      <div style="flex:1;height:88px;background:#96733F;display:flex;align-items:flex-end;padding:10px;"><span class="swatch-hex" style="color:#EFEBE2;">700 · #96733F</span></div>
+      <div style="flex:1;height:88px;background:#5E4726;display:flex;align-items:flex-end;padding:10px;"><span class="swatch-hex" style="color:#EFEBE2;">900 · #5E4726</span></div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:20px;padding-bottom:96px;">
+    <div class="eyebrow">Semantic — kept in-family, never saturated</div>
+    <div style="display:flex;gap:1px;background:var(--line);border:1px solid var(--line);">
+      <div style="width:340px;padding:22px;background:#E6EBE2;display:flex;flex-direction:column;gap:10px;">
+        <div style="width:28px;height:28px;background:#5C7A5A;"></div>
+        <div class="swatch-label">Success · #5C7A5A</div>
+        <div class="swatch-use">Confirmed, funded, within mandate.</div>
+      </div>
+      <div style="width:340px;padding:22px;background:#F1E4CE;display:flex;flex-direction:column;gap:10px;">
+        <div style="width:28px;height:28px;background:#9C6B2E;"></div>
+        <div class="swatch-label">Warning · #9C6B2E</div>
+        <div class="swatch-use">Nearing threshold, needs review.</div>
+      </div>
+      <div style="width:340px;padding:22px;background:#F0E0DC;display:flex;flex-direction:column;gap:10px;">
+        <div style="width:28px;height:28px;background:#8C4A42;"></div>
+        <div class="swatch-label">Error · #8C4A42</div>
+        <div class="swatch-use">Breach, off-mandate, requires action.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,123 @@
+/* Leveraged — design tokens
+   Generated from Brand direction.png and logo.png.
+   Fonts: Source Serif 4 (display), Work Sans (body/UI). */
+
+:root {
+  /* Color — navy scale */
+  --color-navy-100: #DCE2EA;
+  --color-navy-300: #98A7BC;
+  --color-navy-500: #3E5480; /* "slate" — secondary */
+  --color-navy-700: #1E2E4F; /* "navy" — primary */
+  --color-navy-900: #121C30;
+
+  /* Color — brass scale */
+  --color-brass-100: #F0E4D2;
+  --color-brass-300: #D9B98A;
+  --color-brass-500: #B38A53; /* accent */
+  --color-brass-700: #96733F;
+  --color-brass-900: #5E4726;
+
+  /* Color — neutrals */
+  --color-neutral-0: #FFFFFF;
+  --color-neutral-50: #F7F5EF;
+  --color-neutral-100: #EFEBE2; /* "bone" — page background */
+  --color-neutral-300: #C7C1B4;
+  --color-neutral-600: #4A453E;
+  --color-neutral-900: #171310; /* "ink" — text */
+
+  /* Color — semantic (in-family, desaturated) */
+  --color-success: #5C7A5A;
+  --color-success-bg: #E6EBE2;
+  --color-warning: #9C6B2E;
+  --color-warning-bg: #F1E4CE;
+  --color-error: #8C4A42;
+  --color-error-bg: #F0E0DC;
+
+  /* Color — borders */
+  --color-border-hairline: rgba(23, 19, 16, 0.14);
+  --color-border-hairline-on-navy: rgba(239, 235, 226, 0.24);
+
+  /* Semantic aliases */
+  --color-bg: var(--color-neutral-100);
+  --color-surface: var(--color-neutral-50);
+  --color-text: var(--color-neutral-900);
+  --color-text-muted: var(--color-neutral-600);
+  --color-text-subtle: var(--color-neutral-300);
+  --color-primary: var(--color-navy-700);
+  --color-secondary: var(--color-navy-500);
+  --color-accent: var(--color-brass-500);
+  --color-accent-hover: var(--color-brass-700);
+
+  /* Typography */
+  --font-display: 'Source Serif 4', Georgia, serif;
+  --font-body: 'Work Sans', 'Helvetica Neue', Arial, sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  --font-size-display: 72px;
+  --font-size-h1: 48px;
+  --font-size-h2: 34px;
+  --font-size-h3: 24px;
+  --font-size-body-l: 18px;
+  --font-size-body: 16px;
+  --font-size-body-s: 14px;
+  --font-size-caption: 12px;
+  --font-size-eyebrow: 12px;
+
+  --line-height-display: 1.08;
+  --line-height-heading: 1.15;
+  --line-height-body: 1.6;
+
+  --letter-spacing-eyebrow: 0.14em;
+
+  /* Space */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* Shape — brand is sharp-cornered; no radius scale beyond 0 */
+  --radius: 0px;
+  --border-width-hairline: 1px;
+}
+
+/* Reusable pieces */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--font-size-eyebrow);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.btn-primary {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  background: var(--color-accent);
+  color: var(--color-neutral-900);
+  border: 1px solid var(--color-accent);
+}
+
+.btn-secondary {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  background: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}

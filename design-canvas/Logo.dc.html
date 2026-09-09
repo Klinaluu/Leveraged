@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500&family=Work+Sans:wght@400;500;600&display=swap">
+  <style>
+    :root{
+      --navy:#1E2E4F; --slate:#3E5480; --brass:#B38A53; --bone:#EFEBE2; --ink:#171310;
+      --ink-600:#4A453E; --ink-300:#8B8579; --line:rgba(23,19,16,0.14);
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;background:var(--bone);font-family:'Work Sans',sans-serif;color:var(--ink);}
+    a{color:var(--brass);} a:hover{color:#96733F;}
+    .eyebrow{font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--slate);}
+    .wordmark{font-family:'Work Sans',sans-serif;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;}
+    .rule{height:1px;}
+  </style>
+</helmet>
+<div style="width:1440px;background:var(--bone);padding:96px;display:flex;flex-direction:column;gap:64px;">
+
+  <div style="display:flex;flex-direction:column;gap:10px;">
+    <div class="eyebrow">Logo</div>
+    <div style="font-family:'Source Serif 4',serif;font-weight:500;font-size:40px;color:var(--navy);">Mark &amp; lockup</div>
+  </div>
+
+  <div style="display:flex;gap:1px;background:var(--line);border:1px solid var(--line);">
+    <div style="width:480px;padding:64px;background:#1E2E4F;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;">
+      <img src="logo.png" alt="Leveraged" style="width:120px;height:120px;">
+      <div class="eyebrow" style="color:#DEE4EC;">On navy — primary</div>
+    </div>
+    <div style="width:480px;padding:64px;background:#F7F5EF;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;width:220px;">
+        <div class="rule" style="width:100%;background:#1E2E4F;"></div>
+        <div class="wordmark" style="font-size:19px;color:#1E2E4F;padding:8px 0;">Leveraged</div>
+        <div class="rule" style="width:100%;background:#1E2E4F;"></div>
+      </div>
+      <div class="eyebrow">On bone — reversed lockup</div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:24px;">
+    <div class="eyebrow">Clearspace</div>
+    <div style="display:flex;align-items:center;gap:1px;background:var(--line);border:1px solid var(--line);width:fit-content;">
+      <div style="padding:56px;background:#F7F5EF;">
+        <div style="border:1px dashed #B38A53;padding:36px;display:flex;">
+          <img src="logo.png" alt="Leveraged" style="width:120px;height:120px;">
+        </div>
+      </div>
+    </div>
+    <div style="font-size:14px;color:var(--ink-600);max-width:560px;line-height:1.55;">
+      Minimum clearspace on every side equals the cap-height of the wordmark (the dashed guide above). Nothing else — text, rule, edge of frame — enters that margin.
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:24px;padding-bottom:96px;">
+    <div class="eyebrow">Minimum size</div>
+    <div style="display:flex;align-items:flex-end;gap:1px;background:var(--line);border:1px solid var(--line);">
+      <div style="width:220px;padding:32px 24px;background:#F7F5EF;display:flex;flex-direction:column;align-items:center;gap:14px;">
+        <img src="logo.png" alt="Leveraged" style="width:96px;height:96px;">
+        <div class="swatch-hex" style="font-size:12px;color:var(--ink-300);">96px — hero / print</div>
+      </div>
+      <div style="width:220px;padding:32px 24px;background:#F7F5EF;display:flex;flex-direction:column;align-items:center;gap:14px;">
+        <img src="logo.png" alt="Leveraged" style="width:48px;height:48px;">
+        <div class="swatch-hex" style="font-size:12px;color:var(--ink-300);">48px — nav / header</div>
+      </div>
+      <div style="width:220px;padding:32px 24px;background:#F7F5EF;display:flex;flex-direction:column;align-items:center;gap:14px;">
+        <img src="logo.png" alt="Leveraged" style="width:24px;height:24px;">
+        <div class="swatch-hex" style="font-size:12px;color:var(--ink-300);">24px — minimum</div>
+      </div>
+    </div>
+    <div style="font-size:14px;color:var(--ink-600);max-width:560px;line-height:1.55;">
+      Below 24px the wordmark stops resolving — use the navy square mark alone, unlabeled, as a favicon or app icon.
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

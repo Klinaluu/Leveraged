@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Work+Sans:wght@400;500;600;700&display=swap">
+  <style>
+    :root{
+      --navy:#1E2E4F; --slate:#3E5480; --brass:#B38A53; --bone:#EFEBE2; --ink:#171310;
+      --ink-600:#4A453E; --ink-300:#8B8579; --line:rgba(23,19,16,0.14);
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;background:var(--bone);font-family:'Work Sans',sans-serif;color:var(--ink);}
+    a{color:var(--brass);} a:hover{color:#96733F;}
+    .eyebrow{font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--slate);}
+    .row{display:flex;align-items:baseline;gap:32px;border-top:1px solid var(--line);padding:22px 0;}
+    .spec{width:220px;flex-shrink:0;font-size:12px;color:var(--ink-300);line-height:1.6;font-variant-numeric:tabular-nums;}
+    .spec b{color:var(--ink-600);font-weight:600;}
+  </style>
+</helmet>
+<div style="width:1440px;background:var(--bone);padding:96px;display:flex;flex-direction:column;gap:64px;">
+
+  <div style="display:flex;flex-direction:column;gap:10px;">
+    <div class="eyebrow">Typography</div>
+    <div style="font-family:'Source Serif 4',serif;font-weight:500;font-size:40px;color:var(--navy);">Type</div>
+    <div style="font-size:16px;color:var(--ink-600);max-width:640px;line-height:1.5;">
+      Source Serif 4 carries editorial weight in headlines. Work Sans carries tables, footnotes, disclosure copy and numerals without competing with it.
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:0;">
+    <div class="eyebrow" style="margin-bottom:12px;">Display — Source Serif 4</div>
+
+    <div class="row">
+      <div class="spec"><b>Display</b><br>72 / 78 · Medium</div>
+      <div style="font-family:'Source Serif 4',serif;font-weight:500;font-size:72px;line-height:1.08;color:var(--navy);">Capital, considered</div>
+    </div>
+    <div class="row">
+      <div class="spec"><b>H1</b><br>48 / 54 · Medium</div>
+      <div style="font-family:'Source Serif 4',serif;font-weight:500;font-size:48px;line-height:1.1;color:var(--navy);">Advisory built for the committee</div>
+    </div>
+    <div class="row">
+      <div class="spec"><b>H2</b><br>34 / 40 · Medium</div>
+      <div style="font-family:'Source Serif 4',serif;font-weight:500;font-size:34px;line-height:1.15;color:var(--navy);">Independent counsel on allocation</div>
+    </div>
+    <div class="row">
+      <div class="spec"><b>H3</b><br>24 / 30 · Regular</div>
+      <div style="font-family:'Source Serif 4',serif;font-weight:400;font-size:24px;line-height:1.25;color:var(--navy);">Structure and exposure, reviewed quarterly</div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;">
+    <div class="eyebrow" style="margin-bottom:12px;">Body &amp; UI — Work Sans</div>
+
+    <div class="row">
+      <div class="spec"><b>Eyebrow label</b><br>12 / 16 · Semibold · 0.14em</div>
+      <div style="font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--slate);">Color &amp; Type Pairings</div>
+    </div>
+    <div class="row">
+      <div class="spec"><b>Body L</b><br>18 / 28 · Regular</div>
+      <div style="font-size:18px;line-height:1.55;color:var(--ink);max-width:680px;">Work Sans carries tables, footnotes and disclosure copy without competing with the display serif.</div>
+    </div>
+    <div class="row">
+      <div class="spec"><b>Body</b><br>16 / 26 · Regular</div>
+      <div style="font-size:16px;line-height:1.6;color:var(--ink-600);max-width:680px;">Numerals are unambiguous at 11px — set for statements, allocation tables and footnotes.</div>
+    </div>
+    <div class="row">
+      <div class="spec"><b>Body S</b><br>14 / 22 · Regular</div>
+      <div style="font-size:14px;line-height:1.55;color:var(--ink-600);max-width:680px;">Used for form labels, table cells and secondary UI copy.</div>
+    </div>
+    <div class="row">
+      <div class="spec"><b>Caption</b><br>12 / 18 · Regular</div>
+      <div style="font-size:12px;line-height:1.5;color:var(--ink-300);max-width:680px;">Footnotes, timestamps, disclosure text.</div>
+    </div>
+    <div class="row" style="padding-bottom:96px;">
+      <div class="spec"><b>Numerals</b><br>Tabular · Medium</div>
+      <div style="font-size:28px;font-weight:500;font-variant-numeric:tabular-nums;color:var(--navy);">$1.42B AUA &nbsp;·&nbsp; 0123456789 &nbsp;·&nbsp; +2.14%</div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
